@@ -16,6 +16,7 @@ templ base(title string, body templ.Component, challenge any, ogTags map[string]
 			for key, value := range ogTags {
 				<meta property={ key } content={ value }/>
 			}
+
 			<style>
         body,
         html {
@@ -55,6 +56,86 @@ templ base(title string, body templ.Component, challenge any, ogTags map[string]
             transition: width 0.25s ease-in;
         }
     </style>
+
+		<!-- DUL CUSTOM FONT -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+		<!-- DUL CUSTOM STYLES HERE OVERRIDE ANUBIS DEFAULTS -->
+		<!-- See xess/xess.css for default values -->
+		<style type="text/css">
+			:root {
+				--body-sans-font: "Source Sans 3", sans-serif;
+				--body-title-font: "Source Sans 3", sans-serif;
+
+				// Note DUL doesn't support light vs. dark mode
+				// so we keep these variables the same b/w modes.
+
+				--dark-background: #f3f2f1; // $whisper-gray
+				--dark-text: #262626; // $cast-iron
+				--dark-text-selection: #e2e6ed; // $hatteras
+				--dark-preformatted-background: transparent;
+				--dark-link-foreground: #004ccc;
+				--dark-link-background: transparent;
+				--dark-blockquote-border-left: 1px solid #262626; // $cast-iron
+
+				--light-background: #f3f2f1; // $whisper-gray
+				--light-text: #262626; // $cast-iron
+				--light-text-selection: #e2e6ed; // $hatteras
+				--light-preformatted-background: transparent;
+				--light-link-foreground: #004ccc;
+				--light-link-background: transparent;
+				--light-blockquote-border-left: 1px solid #262626; // $cast-iron
+
+				--progress-bar-outline: #a1b70d solid 2px; // $piedmont
+				--progress-bar-fill: #a1b70d; // $piedmont
+			}
+
+			body,
+			html {
+				margin: 0;
+				font-family: "Source Sans 3", sans-serif !important;
+				display: block;
+				background-color: #f3f2f1; // $whisper-gray
+			}
+
+			header {
+				background-color: #053482;
+				height: 75px;
+				width: 100%;
+			}
+
+			h1#title {
+				font-weight: 600;
+				margin-bottom: 1rem;
+			}
+
+			details {
+				display: none !important;
+			}
+
+			#progress {
+				outline-color: #a1b70d !important;
+			}
+
+			.bar-inner {
+				background-color: #a1b70d !important;
+			}
+
+			::selection {
+				background: #e2e6ed !important; // $hatteras
+			}
+
+      footer {
+				border-top: 1px solid #b5b5b5; // $granite
+				margin-top: 2rem;
+				padding-top: 2rem;
+			}
+
+		</style>
+
+
 			@templ.JSONScript("anubis_version", anubis.Version)
 			if challenge != nil {
 				@templ.JSONScript("anubis_challenge", challenge)
@@ -62,6 +143,10 @@ templ base(title string, body templ.Component, challenge any, ogTags map[string]
 			@templ.JSONScript("anubis_base_prefix", anubis.BasePrefix)
 		</head>
 		<body id="top">
+			<!-- DUL CUSTOM header element -->
+			<header>
+				<!-- <a href="https://library.duke.edu">Duke University Libraries</a> -->
+			</header>
 			<main>
 				<center>
 					<h1 id="title" class=".centered-div">{ title }</h1>
@@ -76,6 +161,7 @@ templ base(title string, body templ.Component, challenge any, ogTags map[string]
 						</p>
 						<p>Mascot design by <a href="https://bsky.app/profile/celphase.bsky.social">CELPHASE</a>.</p>
 					</center>
+
 				</footer>
 			</main>
 		</body>
