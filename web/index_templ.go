@@ -96,7 +96,7 @@ func base(title string, body templ.Component, challenge any, ogTags map[string]s
 				return templ_7745c5c3_Err
 			}
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "<style>\n        body,\n        html {\n            height: 100%;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            margin-left: auto;\n            margin-right: auto;\n        }\n\n        .centered-div {\n            text-align: center;\n        }\n\n        #status {\n            font-variant-numeric: tabular-nums;\n        }\n\n        #progress {\n            display: none;\n            width: min(20rem, 90%);\n            height: 2rem;\n            border-radius: 1rem;\n            overflow: hidden;\n            margin: 1rem 0 2rem;\n            outline-color: #b16286;\n            outline-offset: 2px;\n            outline-style: solid;\n            outline-width: 4px;\n        }\n\n        .bar-inner {\n            background-color: #b16286;\n            height: 100%;\n            width: 0;\n            transition: width 0.25s ease-in;\n        }\n    </style>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "<style>\n        body,\n        html {\n            height: 100%;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            margin-left: auto;\n            margin-right: auto;\n        }\n\n        .centered-div {\n            text-align: center;\n        }\n\n        #status {\n            font-variant-numeric: tabular-nums;\n        }\n\n        #progress {\n            display: none;\n            width: min(20rem, 90%);\n            height: 2rem;\n            border-radius: 1rem;\n            overflow: hidden;\n            margin: 1rem 0 2rem;\n            outline-color: #b16286;\n            outline-offset: 2px;\n            outline-style: solid;\n            outline-width: 4px;\n        }\n\n        .bar-inner {\n            background-color: #b16286;\n            height: 100%;\n            width: 0;\n            transition: width 0.25s ease-in;\n        }\n    </style><!-- DUL CUSTOM FONT --><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap\" rel=\"stylesheet\"><!-- DUL CUSTOM STYLES HERE OVERRIDE ANUBIS DEFAULTS --><!-- See xess/xess.css for default values --><style type=\"text/css\">\n\t\t\t:root {\n\t\t\t\t--body-sans-font: \"Source Sans 3\", sans-serif;\n\t\t\t\t--body-title-font: \"Source Sans 3\", sans-serif;\n\n\t\t\t\t// Note DUL doesn't support light vs. dark mode\n\t\t\t\t// so we keep these variables the same b/w modes.\n\n\t\t\t\t--dark-background: #f3f2f1; // $whisper-gray\n\t\t\t\t--dark-text: #262626; // $cast-iron\n\t\t\t\t--dark-text-selection: #e2e6ed; // $hatteras\n\t\t\t\t--dark-preformatted-background: transparent;\n\t\t\t\t--dark-link-foreground: #004ccc;\n\t\t\t\t--dark-link-background: transparent;\n\t\t\t\t--dark-blockquote-border-left: 1px solid #262626; // $cast-iron\n\n\t\t\t\t--light-background: #f3f2f1; // $whisper-gray\n\t\t\t\t--light-text: #262626; // $cast-iron\n\t\t\t\t--light-text-selection: #e2e6ed; // $hatteras\n\t\t\t\t--light-preformatted-background: transparent;\n\t\t\t\t--light-link-foreground: #004ccc;\n\t\t\t\t--light-link-background: transparent;\n\t\t\t\t--light-blockquote-border-left: 1px solid #262626; // $cast-iron\n\n\t\t\t\t--progress-bar-outline: #a1b70d solid 2px; // $piedmont\n\t\t\t\t--progress-bar-fill: #a1b70d; // $piedmont\n\t\t\t}\n\n\t\t\tbody,\n\t\t\thtml {\n\t\t\t\tmargin: 0;\n\t\t\t\tfont-family: \"Source Sans 3\", sans-serif !important;\n\t\t\t\tdisplay: block;\n\t\t\t\tbackground-color: #f3f2f1; // $whisper-gray\n\t\t\t}\n\n\t\t\theader {\n\t\t\t\tbackground-color: #053482;\n\t\t\t\theight: 75px;\n\t\t\t\twidth: 100%;\n\t\t\t}\n\n\t\t\th1#title {\n\t\t\t\tfont-weight: 600;\n\t\t\t\tmargin-bottom: 1rem;\n\t\t\t}\n\n\t\t\tdetails {\n\t\t\t\tdisplay: none !important;\n\t\t\t}\n\n\t\t\t#progress {\n\t\t\t\toutline-color: #a1b70d !important;\n\t\t\t}\n\n\t\t\t.bar-inner {\n\t\t\t\tbackground-color: #a1b70d !important;\n\t\t\t}\n\n\t\t\t::selection {\n\t\t\t\tbackground: #e2e6ed !important; // $hatteras\n\t\t\t}\n\n      footer {\n\t\t\t\tborder-top: 1px solid #b5b5b5; // $granite\n\t\t\t\tmargin-top: 2rem;\n\t\t\t\tpadding-top: 2rem;\n\t\t\t}\n\n\t\t</style>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -114,14 +114,14 @@ func base(title string, body templ.Component, challenge any, ogTags map[string]s
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 8, "</head><body id=\"top\"><main><center><h1 id=\"title\" class=\".centered-div\">")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 8, "</head><body id=\"top\"><!-- DUL CUSTOM header element --><header><!-- <a href=\"https://library.duke.edu\">Duke University Libraries</a> --></header><main><center><h1 id=\"title\" class=\".centered-div\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var6 string
 		templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 67, Col: 49}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 152, Col: 49}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 		if templ_7745c5c3_Err != nil {
@@ -171,7 +171,7 @@ func index() templ.Component {
 		var templ_7745c5c3_Var8 string
 		templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinStringErrs(anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/img/pensive.webp?cacheBuster=" + anubis.Version)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 87, Col: 165}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 173, Col: 165}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var8))
 		if templ_7745c5c3_Err != nil {
@@ -184,7 +184,7 @@ func index() templ.Component {
 		var templ_7745c5c3_Var9 string
 		templ_7745c5c3_Var9, templ_7745c5c3_Err = templ.JoinStringErrs(anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/img/happy.webp?cacheBuster=" + anubis.Version)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 88, Col: 174}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 174, Col: 174}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var9))
 		if templ_7745c5c3_Err != nil {
@@ -197,7 +197,7 @@ func index() templ.Component {
 		var templ_7745c5c3_Var10 string
 		templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs(anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/js/main.mjs?cacheBuster=" + anubis.Version)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 90, Col: 136}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 176, Col: 136}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
 		if templ_7745c5c3_Err != nil {
@@ -239,7 +239,7 @@ func errorPage(message string, mail string) templ.Component {
 		var templ_7745c5c3_Var12 string
 		templ_7745c5c3_Var12, templ_7745c5c3_Err = templ.JoinStringErrs(anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/img/reject.webp?cacheBuster=" + anubis.Version)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 140, Col: 181}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 226, Col: 181}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var12))
 		if templ_7745c5c3_Err != nil {
@@ -252,7 +252,7 @@ func errorPage(message string, mail string) templ.Component {
 		var templ_7745c5c3_Var13 string
 		templ_7745c5c3_Var13, templ_7745c5c3_Err = templ.JoinStringErrs(message)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 141, Col: 14}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 227, Col: 14}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var13))
 		if templ_7745c5c3_Err != nil {
@@ -279,7 +279,7 @@ func errorPage(message string, mail string) templ.Component {
 			var templ_7745c5c3_Var15 string
 			templ_7745c5c3_Var15, templ_7745c5c3_Err = templ.JoinStringErrs(mail)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 147, Col: 11}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 233, Col: 11}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var15))
 			if templ_7745c5c3_Err != nil {
@@ -332,7 +332,7 @@ func StaticHappy() templ.Component {
 		templ_7745c5c3_Var17, templ_7745c5c3_Err = templ.JoinStringErrs("/.within.website/x/cmd/anubis/static/img/happy.webp?cacheBuster=" +
 			anubis.Version)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 162, Col: 18}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 248, Col: 18}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var17))
 		if templ_7745c5c3_Err != nil {
@@ -374,7 +374,7 @@ func bench() templ.Component {
 		var templ_7745c5c3_Var19 string
 		templ_7745c5c3_Var19, templ_7745c5c3_Err = templ.JoinStringErrs(anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/img/pensive.webp?cacheBuster=" + anubis.Version)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 191, Col: 166}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 277, Col: 166}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var19))
 		if templ_7745c5c3_Err != nil {
@@ -387,7 +387,7 @@ func bench() templ.Component {
 		var templ_7745c5c3_Var20 string
 		templ_7745c5c3_Var20, templ_7745c5c3_Err = templ.JoinStringErrs(anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/js/bench.mjs?cacheBuster=" + anubis.Version)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 193, Col: 138}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `index.templ`, Line: 279, Col: 138}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var20))
 		if templ_7745c5c3_Err != nil {

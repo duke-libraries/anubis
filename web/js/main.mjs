@@ -253,7 +253,10 @@ function showContinueBar(hash, nonce, t0, t1) {
             elapsedTime: t1 - t0
           }),
         );
-      }, 250);
+      // DUL CUSTOMIZATION: we set this timeout to 0 to avoid displaying a
+      // "success" screen altogether. For debugging, it may be useful to
+      // set this to e.g., 10000 to see the success screen for 10 sec.
+      }, 0);
     }
 
   } catch (err) {
